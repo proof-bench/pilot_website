@@ -8,7 +8,9 @@ Publishing runs through GitHub Actions (`.github/workflows/site.yml`; Settings -
 Source: GitHub Actions). The workflow only publishes; it never pulls the problem list
 from the statements repository.
 
-* `assets/js/problem-data.js`: problem list copied from the main site, without the `name`,
-  `summary` and `lean` fields.
+* `assets/js/problem-data.js`: the official problem list, without the `name`, `summary` and
+  `lean` fields and without notes that may cite a source. Nothing updates it automatically: when
+  the statements repository changes, run `python scripts/build_problems.py
+  path/to/proofbench/ProofBench/DATABASE/Database.json`.
 * `scripts/build_problems.py`: the main site's generator, changed so that it never exports
-  those fields if it is ever run here.
+  those fields, and only the notes in `SAFE_NOTES`.

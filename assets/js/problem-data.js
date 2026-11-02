@@ -3,15 +3,15 @@ window.PB_PROBLEMS = [
 {
 "id": "001",
 "cat": "research",
-"note": "open until Oct 2026; disproved in OpenAI's math release of 6 Oct 2026 with a Comparator-checked Lean proof, github.com/openai/math, not yet independently verified",
-"resolved": "disproved",
+"note": "",
+"resolved": "",
 "msc": "05C15 Coloring of graphs and hypergraphs",
 "area": "Graph theory",
 "sub": ""
 },
 {
 "id": "002",
-"cat": "open",
+"cat": "research",
 "note": "",
 "resolved": "",
 "msc": "05B35 Combinatorial aspects of matroids and geometric lattices",
@@ -30,8 +30,8 @@ window.PB_PROBLEMS = [
 {
 "id": "004",
 "cat": "research",
-"note": "open until Oct 2026; disproved in OpenAI's math release of 6 Oct 2026 with a Comparator-checked Lean proof, github.com/openai/math, not yet independently verified",
-"resolved": "disproved",
+"note": "",
+"resolved": "",
 "msc": "05C35 Extremal problems in graph theory",
 "area": "Graph theory",
 "sub": ""
@@ -66,8 +66,8 @@ window.PB_PROBLEMS = [
 {
 "id": "008",
 "cat": "research",
-"note": "open until Oct 2026; disproved in OpenAI's math release of 6 Oct 2026 with a Comparator-checked Lean proof, github.com/openai/math, not yet independently verified",
-"resolved": "disproved",
+"note": "",
+"resolved": "",
 "msc": "05C65 Hypergraphs",
 "area": "Graph theory",
 "sub": ""
@@ -111,7 +111,7 @@ window.PB_PROBLEMS = [
 {
 "id": "013",
 "cat": "calibration",
-"note": "upper-end; statement and sandwich formalized; Lean reference pending",
+"note": "upper-end",
 "resolved": "",
 "msc": "05D05 Extremal set theory; 11K38 Discrepancy and irregularities of distribution",
 "area": "Graph theory",
@@ -119,8 +119,8 @@ window.PB_PROBLEMS = [
 },
 {
 "id": "014",
-"cat": "research",
-"note": "",
+"cat": "calibration",
+"note": "elementary",
 "resolved": "",
 "msc": "05C15 Coloring of graphs and hypergraphs",
 "area": "Graph theory",
@@ -191,8 +191,8 @@ window.PB_PROBLEMS = [
 },
 {
 "id": "022",
-"cat": "research",
-"note": "",
+"cat": "calibration",
+"note": "upper-end",
 "resolved": "",
 "msc": "05C83 Graph minors",
 "area": "Graph theory",
@@ -230,15 +230,15 @@ window.PB_PROBLEMS = [
 "cat": "research",
 "note": "",
 "resolved": "",
-"msc": "05C83 Graph minors",
-"area": "Graph theory",
+"msc": "52A20 Convex sets in n dimensions; 05C62 Graph representations",
+"area": "Discrete geometry",
 "sub": ""
 },
 {
 "id": "027",
 "cat": "research",
-"note": "open until Oct 2026; proved in OpenAI's math release of 6 Oct 2026 with a Comparator-checked Lean proof, github.com/openai/math, not yet independently verified",
-"resolved": "proved",
+"note": "",
+"resolved": "",
 "msc": "05C20 Directed graphs (digraphs), tournaments",
 "area": "Graph theory",
 "sub": ""
@@ -254,8 +254,8 @@ window.PB_PROBLEMS = [
 },
 {
 "id": "029",
-"cat": "research",
-"note": "",
+"cat": "calibration",
+"note": "medium",
 "resolved": "",
 "msc": "05C15 Colouring of graphs and hypergraphs",
 "area": "Graph theory",
@@ -299,8 +299,8 @@ window.PB_PROBLEMS = [
 },
 {
 "id": "034",
-"cat": "research",
-"note": "",
+"cat": "calibration",
+"note": "short",
 "resolved": "",
 "msc": "05C15 Colouring of graphs and hypergraphs",
 "area": "Graph theory",
@@ -308,8 +308,8 @@ window.PB_PROBLEMS = [
 },
 {
 "id": "035",
-"cat": "research",
-"note": "",
+"cat": "calibration",
+"note": "short",
 "resolved": "",
 "msc": "05C15 Colouring of graphs and hypergraphs",
 "area": "Graph theory",
@@ -317,8 +317,8 @@ window.PB_PROBLEMS = [
 },
 {
 "id": "036",
-"cat": "research",
-"note": "",
+"cat": "calibration",
+"note": "short",
 "resolved": "",
 "msc": "05C15 Colouring of graphs and hypergraphs",
 "area": "Graph theory",
@@ -362,8 +362,8 @@ window.PB_PROBLEMS = [
 },
 {
 "id": "041",
-"cat": "research",
-"note": "",
+"cat": "calibration",
+"note": "elementary",
 "resolved": "",
 "msc": "68R05 Combinatorics in computer science; 03B05 Propositional logic",
 "area": "Graph theory",
@@ -704,7 +704,7 @@ window.PB_PROBLEMS = [
 },
 {
 "id": "079",
-"cat": "open",
+"cat": "research",
 "note": "",
 "resolved": "",
 "msc": "05C15 Coloring of graphs and hypergraphs; 05C38 Paths and cycles",
@@ -777,7 +777,7 @@ window.PB_PROBLEMS = [
 {
 "id": "087",
 "cat": "calibration",
-"note": "upper-end; proved in literature; Lean proof pending",
+"note": "upper-end",
 "resolved": "",
 "msc": "05C15 Coloring of graphs and hypergraphs",
 "area": "Graph theory",
@@ -786,7 +786,7 @@ window.PB_PROBLEMS = [
 {
 "id": "088",
 "cat": "calibration",
-"note": "elementary; full Lean reference proof",
+"note": "elementary",
 "resolved": "",
 "msc": "05C55 Generalized Ramsey theory",
 "area": "Graph theory",
@@ -795,7 +795,7 @@ window.PB_PROBLEMS = [
 {
 "id": "089",
 "cat": "calibration",
-"note": "elementary; full Lean reference proof",
+"note": "elementary",
 "resolved": "",
 "msc": "05D10 Ramsey theory; 06A05 Total order",
 "area": "Graph theory",
@@ -804,7 +804,7 @@ window.PB_PROBLEMS = [
 {
 "id": "090",
 "cat": "calibration",
-"note": "short; full Lean reference proof",
+"note": "short",
 "resolved": "",
 "msc": "05C50 Graphs and linear algebra (matrices, eigenvalues, etc.); 05E30 Association schemes, strongly regular graphs",
 "area": "Graph theory",
@@ -813,7 +813,7 @@ window.PB_PROBLEMS = [
 {
 "id": "091",
 "cat": "calibration",
-"note": "medium; full Lean reference proof",
+"note": "medium",
 "resolved": "",
 "msc": "05D05 Extremal set theory",
 "area": "Graph theory",
@@ -822,7 +822,7 @@ window.PB_PROBLEMS = [
 {
 "id": "092",
 "cat": "calibration",
-"note": "medium; statement and sandwich formalized; Lean reference pending",
+"note": "medium",
 "resolved": "",
 "msc": "05C75 Structural characterization of families of graphs; 05C50 Graphs and linear algebra",
 "area": "Graph theory",
@@ -831,7 +831,7 @@ window.PB_PROBLEMS = [
 {
 "id": "093",
 "cat": "calibration",
-"note": "medium; statement and sandwich formalized; Lean reference pending",
+"note": "medium",
 "resolved": "",
 "msc": "05C45 Eulerian and Hamiltonian graphs",
 "area": "Graph theory",
@@ -876,7 +876,7 @@ window.PB_PROBLEMS = [
 {
 "id": "098",
 "cat": "calibration",
-"note": "short/medium; full independent Lean reference proof",
+"note": "short/medium",
 "resolved": "",
 "msc": "05C35 Extremal problems in graph theory",
 "area": "Graph theory",
@@ -975,7 +975,7 @@ window.PB_PROBLEMS = [
 {
 "id": "109",
 "cat": "calibration",
-"note": "elementary; full Lean reference proof",
+"note": "elementary",
 "resolved": "",
 "msc": "05C07 Vertex degrees",
 "area": "Graph theory",
@@ -984,7 +984,7 @@ window.PB_PROBLEMS = [
 {
 "id": "110",
 "cat": "calibration",
-"note": "elementary; full Lean reference proof",
+"note": "elementary",
 "resolved": "",
 "msc": "11B75 Other combinatorial number theory; 05D10 Ramsey theory",
 "area": "Graph theory",
@@ -993,7 +993,7 @@ window.PB_PROBLEMS = [
 {
 "id": "111",
 "cat": "calibration",
-"note": "elementary; full Lean reference proof",
+"note": "elementary",
 "resolved": "",
 "msc": "11B75 Other combinatorial number theory; 05D05 Extremal set theory",
 "area": "Number theory",
@@ -1019,8 +1019,8 @@ window.PB_PROBLEMS = [
 },
 {
 "id": "114",
-"cat": "research",
-"note": "proof announced by I. Alam, arXiv:2501.04321 (2025), using nonstandard analysis; not yet refereed",
+"cat": "open",
+"note": "",
 "resolved": "",
 "msc": "05B35 Combinatorial aspects of matroids and geometric lattices",
 "area": "Matroids",
@@ -1043,5 +1043,14 @@ window.PB_PROBLEMS = [
 "msc": "05D10 Ramsey theory",
 "area": "Graph theory",
 "sub": "Extremal graph theory"
+},
+{
+"id": "117",
+"cat": "research",
+"note": "constructive track: no Classical.choice",
+"resolved": "",
+"msc": "05C15 Coloring of graphs and hypergraphs",
+"area": "Graph theory",
+"sub": ""
 }
 ];

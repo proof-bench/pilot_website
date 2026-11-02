@@ -4,7 +4,8 @@ Usage:
     python scripts/build_problems.py path/to/proofbench/ProofBench/DATABASE/Database.json
 
 Pilot copy: only id, difficulty, MSC and area are exported; names, summaries and formal
-statements stay out, since a name alone can give a problem away. The counts in the pages are filled in from the same data: an element
+statements stay out, since a name alone can give a problem away, and so does any note outside
+SAFE_NOTES, which may cite the source. The counts in the pages are filled in from the same data: an element
 with `data-pb="key"` gets the number as its text (and as `data-count`, for the animated counters),
 `data-pb-text="... {key} ..."` sets the element's text from a template, and `data-pb-<attribute>`
 sets that attribute from a template (for `<meta>` descriptions and `aria-label`s). Keys: total, open,
@@ -17,6 +18,15 @@ import re
 import sys
 from collections import Counter
 from pathlib import Path
+
+SAFE_NOTES = {
+    "elementary",
+    "short",
+    "short/medium",
+    "medium",
+    "upper-end",
+    "constructive track: no Classical.choice",
+}
 
 AREAS = {
     "05C": "Graph theory",
@@ -34,34 +44,35 @@ T, A, G, E, R, N = ("Topological graph theory", "Algebraic & spectral graph theo
                     "Random graphs", "Enumerative graph theory")
 AREA_OVERRIDES = {
     # graph theory
-    "009": ("Graph theory", E),   # union-closed sets; graph form via maximal stable sets
-    "012": ("Graph theory", E),   # partial transversals = rainbow matchings in edge-coloured K_{n,n}
-    "013": ("Graph theory", E),   # Beck-Fiala discrepancy of bounded-degree hypergraphs
-    "016": ("Graph theory", A),   # Shao tensor product, the algebra of spectral hypergraph theory
-    "041": ("Graph theory", G),   # 3-SAT step in the hardness of planarity for temporal graph sequences
-    "042": ("Graph theory", A),   # Riemann hypothesis; graph analogue via Ihara zeta and Ramanujan graphs
-    "053": ("Graph theory", E),   # hypergraph joints (Chao-Yu)
-    "065": ("Graph theory", G),   # Kahn-Kalai: chromatic number of a diameter graph
-    "067": ("Graph theory", T),   # embedding 2-complexes in 3-space, planarity one dimension up
-    "070": ("Graph theory", E),   # continuum hypothesis; infinite Ramsey theory and partition calculus
-    "073": ("Graph theory", N),   # Alon-Tarsi: even vs odd Latin squares (edge colourings of K_{n,n})
-    "076": ("Graph theory", A),   # Conway's 99-graph
-    "077": ("Graph theory", A),   # 57-regular Moore graph
-    "085": ("Graph theory", T),   # lonely runner; circular chromatic number of distance graphs
-    "089": ("Graph theory", E),   # Erdos-Szekeres; cliques and stable sets in permutation graphs
-    "091": ("Graph theory", E),   # Bollobas set-pairs inequality
-    "102": ("Graph theory", R),   # sparse random matrices on random Tanner graphs
-    "103": ("Graph theory", R),   # orders of the random bipartite graph B(n, n, p)
-    "110": ("Graph theory", E),   # zero-sum blocks; zero-sum Ramsey theory
-    "116": ("Graph theory", E),   # diagonal Ramsey numbers
+    "009": ("Graph theory", E),
+    "012": ("Graph theory", E),
+    "013": ("Graph theory", E),
+    "016": ("Graph theory", A),
+    "041": ("Graph theory", G),
+    "042": ("Graph theory", A),
+    "053": ("Graph theory", E),
+    "065": ("Graph theory", G),
+    "067": ("Graph theory", T),
+    "070": ("Graph theory", E),
+    "073": ("Graph theory", N),
+    "076": ("Graph theory", A),
+    "077": ("Graph theory", A),
+    "085": ("Graph theory", T),
+    "089": ("Graph theory", E),
+    "091": ("Graph theory", E),
+    "102": ("Graph theory", R),
+    "103": ("Graph theory", R),
+    "110": ("Graph theory", E),
+    "116": ("Graph theory", E),
     # other fields
     "007": ("Discrete geometry", ""),
+    "026": ("Discrete geometry", ""),
     "037": ("Group theory", ""),
     "072": ("Combinatorics on words", ""),
     "075": ("Combinatorics on words", ""),
     "074": ("Number theory", ""),
     "111": ("Number theory", ""),
-    "115": ("Number theory", ""),   # van der Waerden numbers: Ramsey theory on the integers
+    "115": ("Number theory", ""),
 }
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -124,7 +135,8 @@ def category(difficulty: str) -> str:
 
 def note(difficulty: str) -> str:
     m = re.search(r"\((.*)\)\s*$", difficulty)
-    return m.group(1) if m else ""
+    text = m.group(1) if m else ""
+    return text if text in SAFE_NOTES else ""
 
 
 def resolved(difficulty: str) -> str:
