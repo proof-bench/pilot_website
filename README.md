@@ -1,6 +1,6 @@
 # pilot_website
 
-A preview copy of the ProofBench website (https://proof-bench.github.io) for sharing the
+A preview copy of the ProofBench website (https://lp-bench.github.io) for sharing the
 project with students. It lists the problems by number, category and area only.
 
 Plain HTML, CSS and JavaScript; no build step. Open `index.html` locally to preview.
